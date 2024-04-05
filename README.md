@@ -27,22 +27,22 @@ https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d
       <th>Feature Description</th>
     </tr>
     <tr>
-      <td><img src="./assets/iwoc-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Social Winter of S4" /></td>
+      <td><img src="./assets/Google-Gemini-AI-model.webp" width="200" height="auto" loading="lazy" alt="gemini" /></td>
       <td>Dialogue Generation</td>
       <td>With advanced dialogue generation capabilities, your characters come to life on the comic pages. Using sophisticated summary, gemeni generates natural and dynamic dialogues that complement the visuals, enhancing the overall storytelling experience.</td>
     </tr>
     <tr>
-      <td><img src="./assets/swoc-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Social Winter of S4" /></td>
+      <td><img src="./assets/DREAMSTUDIO.png" width="200" height="auto" loading="lazy" alt="dream studio" /></td>
       <td>Comic Art Generation</td>
       <td>: Leveraging stability AI and DreamStudio API keys, Comic Art Generation process is infused with stability and creativity. Stability AI ensures consistent and reliable image processing, while DreamStudio API keys unlock a world of artistic possibilities, allowing us to create captivating comic art with ease.</td>
     </tr>
     <tr>
-      <td><img src="./assets/hacktoberfest-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Hacktoberfest" /></td>
+      <td><img src="./assets/FLAGSMITH.jpg" width="200" height="auto" loading="lazy" alt="flagsmit" /></td>
       <td>Flagsmith Feature Flags Integration</td>
       <td>I've implemented  flagsmith feature flags into our project, providing you with ultimate control over its functionalities. Whether you need to toggle specific features on or off, our feature flags make it effortless to customize the comic generation process according to your preferences and requirements.</td>
     </tr>
       <tr>
-      <td><img src="./assets/hacktoberfest-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Hacktoberfest" /></td>
+      <td><img src="./assets/NODEMAILER.jpg" width="200" height="auto" loading="lazy" alt="nodemailer" /></td>
       <td>Email Delivery of Comic PDF:</td>
       <td>Seamlessly integrating nodemailer into our workflow, I've streamlined the process of delivering your comic PDF straight to your inbox. Nodemailer provides a robust and reliable solution for sending emails programmatically, ensuring that your comic masterpiece reaches its destination efficiently and securely.</td>
     </tr>
