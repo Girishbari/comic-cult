@@ -4,7 +4,6 @@
 
 ![banner](https://github.com/Girishbari/comic-cult/assets/38005544/8f7228f3-1fa9-488d-9147-2ff3dbbae0bb)
 
-<!-- A web app to get designs inspirations and color palettes for professionals by professionals. -->
 
 ## ℹ️ Project description
 
@@ -14,7 +13,10 @@ Transform your stories into captivating comic art with dialogue effortlessly! Ou
 
 ## Demo 💻
 
-Visit https://palettegram.vercel.app to see the live demo!
+
+https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d-0c138cc11de1
+
+
 
 ## ⚒️ Features:
 
@@ -25,22 +27,22 @@ Visit https://palettegram.vercel.app to see the live demo!
       <th>Feature Description</th>
     </tr>
     <tr>
-      <td><img src=".github/assets/iwoc-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Social Winter of S4" /></td>
+      <td><img src="./assets/iwoc-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Social Winter of S4" /></td>
       <td>Dialogue Generation</td>
       <td>With advanced dialogue generation capabilities, your characters come to life on the comic pages. Using sophisticated summary, gemeni generates natural and dynamic dialogues that complement the visuals, enhancing the overall storytelling experience.</td>
     </tr>
     <tr>
-      <td><img src=".github/assets/swoc-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Social Winter of S4" /></td>
+      <td><img src="./assets/swoc-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Social Winter of S4" /></td>
       <td>Comic Art Generation</td>
       <td>: Leveraging stability AI and DreamStudio API keys, Comic Art Generation process is infused with stability and creativity. Stability AI ensures consistent and reliable image processing, while DreamStudio API keys unlock a world of artistic possibilities, allowing us to create captivating comic art with ease.</td>
     </tr>
     <tr>
-      <td><img src=".github/assets/hacktoberfest-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Hacktoberfest" /></td>
+      <td><img src="./assets/hacktoberfest-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Hacktoberfest" /></td>
       <td>Flagsmith Feature Flags Integration</td>
       <td>I've implemented  flagsmith feature flags into our project, providing you with ultimate control over its functionalities. Whether you need to toggle specific features on or off, our feature flags make it effortless to customize the comic generation process according to your preferences and requirements.</td>
     </tr>
       <tr>
-      <td><img src=".github/assets/hacktoberfest-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Hacktoberfest" /></td>
+      <td><img src="./assets/hacktoberfest-banner.png" width="200" height="auto" loading="lazy" alt="Welcome to Hacktoberfest" /></td>
       <td>Email Delivery of Comic PDF:</td>
       <td>Seamlessly integrating nodemailer into our workflow, I've streamlined the process of delivering your comic PDF straight to your inbox. Nodemailer provides a robust and reliable solution for sending emails programmatically, ensuring that your comic masterpiece reaches its destination efficiently and securely.</td>
     </tr>
