@@ -12,8 +12,8 @@ require('dotenv').config();
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.user,
-    pass: process.env.pass
+    user: 'barigirish21@gmail.com',
+    pass: 'wjta teuw ljoq taxn'
   }
 })
 
@@ -32,6 +32,12 @@ app.use(express.urlencoded({ extended: true }));
 const makePdf = () => {
   return new Promise((resolve, reject) => {
     try {
+      const imageFiles = fs.readdirSync("./final/main/");
+      if (imageFiles.length === 0) {
+        console.log(imageFiles)
+        reject("no image has been generated")
+        return;
+      };
       let randomNum = Math.floor(Math.random() * 1000);
 
       const doc = new PDFDocument({ size: [512, 515] });
@@ -41,8 +47,6 @@ const makePdf = () => {
       if (!pdfPath) reject("no path generated");
       doc.pipe(fs.createWriteStream(pdfPath));
 
-      const imageFiles = fs.readdirSync("./final/main/");
-      if (imageFiles.length === 0) reject("no image has been generated");
       imageFiles.forEach((image) => {
         const imagePath = `./final/main/${image}`;
         doc.image(imagePath, 1, 1, { fit: [512, 512] });

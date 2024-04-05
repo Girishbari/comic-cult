@@ -74,65 +74,65 @@ const generateImages = async (person, speech, features, diffusionKey) => {
    try {
       const flags = await flagsmith.getEnvironmentFlags();
 
+      let keyEnabled = flags.isFeatureEnabled("stable_diffusion_key");
+      let key = flags.getFeatureValue("stable_diffusion_key");
 
-      let keyEnabled = flags.isFeatureEnabled("STABLE_DIFFUSION_KEY");
-      let key = flags.getFeatureValue("STABLE_DIFFUSION_KEY");
-
-
-      console.log(flags)
-      if (keyEnabled) apiKey = key;
-      else {
-         if (!diffusionKey) throw new Error("Not allowed to use key, use your key");
+      if (keyEnabled) {
+         apiKey = key;
+         console.log(apiKey);
+      } else {
+         if (!diffusionKey)
+            throw new Error("Not allowed to use key, use your key");
          apiKey = diffusionKey;
       }
-      /* 
-            const response = await fetch(
-               `${apiHost}/v1/generation/${engineId}/text-to-image`,
-               {
-                  method: "POST",
-                  headers: {
-                     "Content-Type": "application/json",
-                     Accept: "application/json",
-                     Authorization: `Bearer ${apiKey}`,
+
+      const response = await fetch(
+         `${apiHost}/v1/generation/${engineId}/text-to-image`,
+         {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json",
+               Accept: "application/json",
+               Authorization: `Bearer ${apiKey}`,
+            },
+            body: JSON.stringify({
+               text_prompts: [
+                  {
+                     text: `A single classic superhero comic panel. In the foreground stands ${person}, a ${features} style . They have a determined expression and a speech bubble pops out from above their head. Inside the speech bubble, write in bold, dynamic lettering: "${speech}".`,
                   },
-                  body: JSON.stringify({
-                     text_prompts: [
-                        {
-                           text: `A single classic superhero comic panel. In the foreground stands ${person}, a ${features} style . They have a determined expression and a speech bubble pops out from above their head. Inside the speech bubble, write in bold, dynamic lettering: "${speech}".`,
-                        },
-                     ],
-                     cfg_scale: 30,
-                     height: 512,
-                     width: 512,
-                     steps: 30,
-                     samples: 1,
-                     seed: 992446758,
-                     style_preset: "comic-book",
-                  }),
+               ],
+               cfg_scale: 30,
+               height: 512,
+               width: 512,
+               steps: 30,
+               samples: 1,
+               seed: 992446758,
+               style_preset: "comic-book",
+            }),
+         }
+      );
+      if (!response.ok) {
+         throw new Error(`Non-200 response: ${await response.text()}`);
+      }
+
+      const responseJSON = await response.json();
+      if (!fs.existsSync("./out/")) {
+         fs.mkdirSync("./out/");
+      }
+      responseJSON.artifacts.forEach((image, index) => {
+         let randomNum = Math.floor(Math.random() * 1000);
+         let filePath = `./out/v1_txt2img_${randomNum}.png`;
+         return new Promise((resolve) => {
+            fs.writeFile(filePath, Buffer.from(image.base64, "base64"), (err) => {
+               if (!err) {
+                  writeDialogue(person, filePath, speech, randomNum);
                }
-            );
-            if (!response.ok) {
-               throw new Error(`Non-200 response: ${await response.text()}`);
-            }
-      
-            const responseJSON = await response.json();
-            if (!fs.existsSync("./out/")) {
-               fs.mkdirSync("./out/");
-            }
-            responseJSON.artifacts.forEach((image, index) => {
-               let randomNum = Math.floor(Math.random() * 1000);
-               let filePath = `./out/v1_txt2img_${randomNum}.png`;
-               return new Promise((resolve) => {
-                  fs.writeFile(filePath, Buffer.from(image.base64, "base64"), (err) => {
-                     if (!err) {
-                        writeDialogue(person, filePath, speech, randomNum);
-                     }
-                     resolve(); // Resolve the promise after writing the dialogue
-                  });
-               });
-            }); */
+               resolve(); // Resolve the promise after writing the dialogue
+            });
+         });
+      });
    } catch (error) {
-      console.log(error)
+      console.log(error);
       return error;
    }
 };

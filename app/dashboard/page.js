@@ -83,9 +83,11 @@ export default function form() {
       });
       if (response.ok) {
         console.log(response.statusText);
+        alert
       } else {
         console.log(response);
-        throw new Error(await response.json());
+        alert(response.statusText);
+        throw new Error();
       }
     } catch (error) {
       console.log("error message => " + error);
