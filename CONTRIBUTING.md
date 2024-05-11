@@ -8,7 +8,7 @@ Contribution guidelines are listed below. Please take the time to go through the
 
 ## Table of Contents
 
-- [Contributing to Palettegram 🪡](#contributing-to-Comic-cult-)
+- [Contributing to Comic-cult 🪡](#contributing-to-Comic-cult-)
   - [Table of Contents](#table-of-contents)
   - [First time Contributor](#first-time-contributor)
   - [I Want To Contribute](#i-want-to-contribute)
@@ -86,7 +86,7 @@ git push -u origin branch_name
 ### Pull Request
 
 Go to your repository in the browser and click on compare and pull requests.
-This will send a request to the maintainer to add your contribution to the main repository i.e., `https://github.com/Sanchitbajaj02/Palettegram.git`
+This will send a request to the maintainer to add your contribution to the main repository i.e., `https://github.com/Girishbari/comic-cult.git`
 
 ### Add a title to your Pull Request.
 
