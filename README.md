@@ -88,8 +88,21 @@ To run this project, you will need to add the following environment variables to
       <tr><td>[Nodemailer]</td> <td> https://stackoverflow.com/questions/45478293/username-and-password-not-accepted-when-using-nodemailer</td> </tr>
 </table>
 
-### Run Locally
+## 🤔 How to contribute ?
 
+Contributing to open-source software (OSS) projects can be a rewarding and fulfilling experience. Not only can you learn new skills, but you can also help make a valuable contribution to a project that benefits the broader community
+
+- Remember to read [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+
+- Read the [Git Workflow](docs/git.md) to follow best practices.
+
+- Follow the [Contribution Guidelines](CONTRIBUTING.md).
+
+- Create an [issue](https://github.com/Sanchitbajaj02/palettegram/issues) to report bugs, and vulnerabilities or add a new feature.
+
+- Remember to add a good commit message.
+
+- Don't spam if you do it your PR/issue will be closed.
 ## Run Locally
 
 Clone the project
