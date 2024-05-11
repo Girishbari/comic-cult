@@ -98,41 +98,8 @@ Contributing to open-source software (OSS) projects can be a rewarding and fulfi
 
 - Follow the [Contribution Guidelines](CONTRIBUTING.md).
 
-- Create an [issue](https://github.com/Sanchitbajaj02/palettegram/issues) to report bugs, and vulnerabilities or add a new feature.
+- Create an [issue](https://github.com/Girishbari/comic-cult/issues) to report bugs, and vulnerabilities or add a new feature.
 
 - Remember to add a good commit message.
 
 - Don't spam if you do it your PR/issue will be closed.
-## Run Locally
-
-Clone the project
-
-```bash
-  git clone https://github.com/Girishbari/comic-cult
-```
-
-Go to the project directory
-
-```bash
-  cd comic-cult
-```
-
-Install dependencies
-
-```bash
-  pnpm install
-```
-
-## fill up the API keys
-
-Start the Front-end
-
-```bash
-  pnpm run dev
-```
-
-Start the back-end
-
-```bash
-  pnpm run server
-```
