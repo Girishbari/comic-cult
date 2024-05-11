@@ -4,7 +4,6 @@
 
 ![banner](https://github.com/Girishbari/comic-cult/assets/38005544/8f7228f3-1fa9-488d-9147-2ff3dbbae0bb)
 
-
 ## ℹ️ Project description
 
 Transform your stories into captivating comic art with dialogue effortlessly! Our project harnesses the power of GemeiAI and stable diffusion for processing and generating stunning images and dialogues. Utilizing feature flags, you can seamlessly toggle environment variables on and off as needed. The final masterpiece is delivered straight to your inbox as a beautifully crafted comic PDF. Enjoy the magic of storytelling in a whole new visual dimension! 📧💬🖼️
@@ -13,10 +12,7 @@ Transform your stories into captivating comic art with dialogue effortlessly! Ou
 
 ## Demo 💻
 
-
 https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d-0c138cc11de1
-
-
 
 ## ⚒️ Features:
 
@@ -86,13 +82,11 @@ https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d
 
 To run this project, you will need to add the following environment variables to your .env file (use .env.example for reference)
 
-[Gemini AI](https://ai.google.dev/docs): `API_KEY`
-
-[Dream Studio](https://dreamstudio.ai/): `API_KEY`
-
-[Setup Flagsmit instance and get flagsmith API](https://docs.flagsmith.com/quickstart) : `API_Key`
-
-[Nodemailer](https://stackoverflow.com/questions/45478293/username-and-password-not-accepted-when-using-nodemailer) user : `your mail` nodemailer pass : `somepass`
+<table>
+    <tr><td>[Gemini AI]</td> <td>https://ai.google.dev/docs </td> </tr>
+     <tr><td>[Dream Studio]</td> <td>https://dreamstudio.ai/ </td> </tr>
+      <tr><td>[Nodemailer]</td> <td> https://stackoverflow.com/questions/45478293/username-and-password-not-accepted-when-using-nodemailer</td> </tr>
+</table>
 
 ### Run Locally
 
@@ -113,7 +107,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  npm install
+  pnpm install
 ```
 
 ## fill up the API keys
@@ -121,11 +115,11 @@ Install dependencies
 Start the Front-end
 
 ```bash
-  npm run dev
+  pnpm run dev
 ```
 
 Start the back-end
 
 ```bash
-  npm run server
+  pnpm run server
 ```

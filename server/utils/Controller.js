@@ -2,18 +2,14 @@ const { GoogleGenerativeAI } = require("@google/generative-ai");
 const fs = require("fs");
 const { createCanvas, loadImage } = require("canvas");
 require("dotenv").config();
-const Flagsmith = require("flagsmith-nodejs");
 
-const flagsmith = new Flagsmith({
-   environmentKey: process.env.flagsmith_key,
-});
 
 const genAI = new GoogleGenerativeAI(process.env.geminiAI);
 
 const engineId = "stable-diffusion-v1-6";
 const apiHost = process.env.API_HOST ?? "https://api.stability.ai";
-/* const apiKey = process.env.STABLE_DIFFUSION_KEY;
- */
+const apiKey = process.env.STABLE_DIFFUSION_KEY;
+
 
 const writeDialogue = async (person, Imgpath, speech, imageNumber) => {
    try {
@@ -69,22 +65,10 @@ const writeDialogue = async (person, Imgpath, speech, imageNumber) => {
    }
 };
 
-const generateImages = async (person, speech, features, diffusionKey) => {
+const generateImages = async (person, speech, features) => {
    let apiKey;
    try {
-      const flags = await flagsmith.getEnvironmentFlags();
 
-      let keyEnabled = flags.isFeatureEnabled("stable_diffusion_key");
-      let key = flags.getFeatureValue("stable_diffusion_key");
-
-      if (keyEnabled) {
-         apiKey = key;
-         console.log(apiKey);
-      } else {
-         if (!diffusionKey)
-            throw new Error("Not allowed to use key, use your key");
-         apiKey = diffusionKey;
-      }
 
       const response = await fetch(
          `${apiHost}/v1/generation/${engineId}/text-to-image`,
@@ -137,7 +121,7 @@ const generateImages = async (person, speech, features, diffusionKey) => {
    }
 };
 
-const generateComic = async (jsonOutput, customization, diffusionKey) => {
+const generateComic = async (jsonOutput, customization) => {
    for (const eachObj of jsonOutput) {
       await generateImages(eachObj.speaker, eachObj.dialogue, customization);
    }
@@ -160,7 +144,7 @@ const generateMapFromText = (text) => {
    return JSON.stringify(jsonOutput, null, 2);
 };
 
-const textToComic = async (userText, customization, diffusionKey) => {
+const textToComic = async (userText, customization) => {
    return new Promise(async (resolve, reject) => {
       try {
          const model = genAI.getGenerativeModel({ model: "gemini-pro" });
@@ -168,7 +152,7 @@ const textToComic = async (userText, customization, diffusionKey) => {
          const result = await model.generateContent(prompt);
          const response = result.response.text();
          const jsonOutput = generateMapFromText(response);
-         await generateComic(JSON.parse(jsonOutput), customization, diffusionKey);
+         await generateComic(JSON.parse(jsonOutput), customization);
          resolve();
       } catch (error) {
          reject(error);

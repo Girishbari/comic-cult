@@ -12,8 +12,8 @@ require('dotenv').config();
 var transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: 'barigirish21@gmail.com',
-    pass: 'wjta teuw ljoq taxn'
+    user: process.env.user,
+    pass: process.env.pass
   }
 })
 
@@ -63,8 +63,8 @@ const makePdf = () => {
 app.get("/download", async (req, res) => {
   const pdfPath = await makePdf();
   var mailOptions = {
-    from: 'barigirish21@gmail.com',
-    to: 'girishbari15@gmail.com',
+    from: process.env.user,
+    to: process.env.receiver,
     subject: 'Sending Email using Node.js',
     text: 'That was easy!',
     attachments: [
@@ -93,8 +93,8 @@ app.post("/", async (req, res) => {
     .then((pdfPath) => {
       console.log("PDF has been created" + pdfPath);
       var mailOptions = {
-        from: 'barigirish21@gmail.com',
-        to: 'barigirish50@gmail.com',
+        from: process.env.user,
+        to: process.env.receiver,
         subject: 'Your Comic',
         text: 'That was easy!',
         attachments: [

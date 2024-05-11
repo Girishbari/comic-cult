@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef, useState } from "react";
-import flagsmith from "flagsmith";
 import Navbar from "../navbar"
 
 export default function form() {
@@ -10,26 +9,10 @@ export default function form() {
     customization: "",
     diffusionKey: "",
   });
-  const [flagState, setFlagState] = useState();
   const [loading, setLoading] = useState();
   const keyRef = useRef();
 
-  async function getFlags() {
-    await flagsmith.init({
-      environmentID: process.env.flagsmith_key,
-      onChange: (oldFlags, params) => {
-        if (flagsmith.hasFeature("STABLE_DIFFUSION_KEY")) {
-          keyRef.current.disabled = true;
-        } else {
-          keyRef.current.disabled = false;
-        }
-      },
-    });
-  }
 
-  useState(() => {
-    getFlags();
-  }, []);
 
   function handleChange(e) {
     const { name, value } = e.target;
@@ -136,8 +119,7 @@ export default function form() {
               name="diffusionKey"
               type="text"
               placeholder="Type here"
-              className={`input input-bordered w-full min-w-lg h-12 ${keyRef.current && 'tooltip'}`}
-              data-tip={`${keyRef.current && 'we have key already'}`}
+              className={`input input-bordered w-full min-w-lg h-12 `}
               onChange={(e) => handleChange(e)}
               ref={keyRef}
             />
