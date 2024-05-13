@@ -1,0 +1,39 @@
+{
+  "LABEL": {
+    "name": "See the prefix of your title, it needs to be one of the below",
+    "color": "F9D0C4",
+    "option": {
+      "prefixes": [
+        "build: ",
+        "chore: ",
+        "docs: ",
+        "feat: ",
+        "fix: ",
+        "perf: ",
+        "refactor: ",
+        "revert: ",
+        "style: ",
+        "test: "
+      ]
+    }
+  },
+  "CHECKS": {
+    "prefixes": [
+      "build: ",
+      "chore: ",
+      "docs: ",
+      "feat: ",
+      "fix: ",
+      "perf: ",
+      "refactor: ",
+      "revert: ",
+      "style: ",
+      "test: "
+    ]
+  },
+  "MESSAGES": {
+    "success": "Everything is great. Statue: 200",
+    "failure": "Testcase failed. Upgrade the title. Status: 400",
+    "notice": ""
+  }
+}
