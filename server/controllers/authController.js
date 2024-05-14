@@ -1,8 +1,8 @@
-const User = require("./../models/userModel");
+const User = require("./../models/userModel"); // Change after the model decided for the user
 const jwt = require("jsonwebtoken");
 
 const createSendToken = (user, statusCode, res) => {
-  const token = signToken(user._id);
+  const token = signToken(user._id); // Change after the model decided for the user
   const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
