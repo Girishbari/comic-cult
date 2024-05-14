@@ -1,8 +1,8 @@
-const User = require("./../models/userModel"); // Change after the model decided for the user
+const User = {}; // Change after the model decided for the user
 const jwt = require("jsonwebtoken");
 
 const createSendToken = (user, statusCode, res) => {
-  const token = signToken(user._id); // Change after the model decided for the user
+  const token = signToken("replace with user id on db"); // Change after the model decided for the user
   const cookieOptions = {
     expires: new Date(
       Date.now() + process.env.JWT_COOKIE_EXPIRES_IN * 24 * 60 * 60 * 1000
@@ -27,7 +27,7 @@ const createSendToken = (user, statusCode, res) => {
 
 
 exports.signup = catchAsync(async (req, res, next) => {
-  const newUser = await User.create(req.body);
+  const newUser = {_id: "new user id"}; // Replace with new user object
   const token = jwt.sign({ id: newUser._id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN,
   });
