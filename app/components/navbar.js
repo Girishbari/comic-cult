@@ -5,7 +5,7 @@ import Button from "./Button"
 
 export default function navbar() {
   return (
-    <div className=" flex justify-between fixed top-0 navbar bg-[#191919] border-b-[1px] md:px-7">
+    <div className=" flex justify-between navbar mb-4 bg-[#191919] border-b-[1px] md:px-7">
       <div className=" space-x-2">
       <div className=" relative w-7 h-5 ">
         <Image src="/logo.png" alt="image" fill/>
