@@ -9,6 +9,7 @@
 #env variable
 ./env
 
+#turbo file
 .turbo
 
 # testing
