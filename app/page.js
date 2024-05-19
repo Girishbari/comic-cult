@@ -1,11 +1,12 @@
+import Hero from "./components/pages/Hero";
 
-import Intro from "./intro";
+
 
 export default function Home() {
   return (
-    <div>
-      
-      <Intro />
+    <div className="lg:w-[720px] md:w-[520px] w-[380px] m-auto    flex flex-col">
+       <Hero/>
+       
     </div>
   );
 }

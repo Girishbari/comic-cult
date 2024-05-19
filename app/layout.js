@@ -21,8 +21,7 @@ export default function RootLayout({ children }) {
 
       <body className={play.className}>
 
-        <div className="relative hero min-h-screen bg-[url('./assets/c2.jpg')]">
-          <div className=" hero-overlay bg-opacity-60"></div>
+        <div className="relative hero min-h-screen bg-[#191919] ">
           <Navbar />
           {children}
         </div>
