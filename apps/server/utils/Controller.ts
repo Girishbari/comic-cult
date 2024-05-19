@@ -191,7 +191,8 @@ const generateMapFromText: (text: string) => string = (text) => {
 
 const textToComic: (
   userText: string,
-  customization: string
+  customization: string,
+  diffusionKey: string | undefined //it is used as a parameter in index.js so had to add but idk what type it is so i am writing it string or undefined
 ) => Promise<void> = async (userText, customization) => {
   return new Promise(async (resolve, reject) => {
     try {
