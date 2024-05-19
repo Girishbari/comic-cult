@@ -77,6 +77,7 @@ https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d
 - [flagsmith](https://tailwindcss.com) - Manage feature flags across web, mobile, and server side applications
 - [Gemini AI](https://tailwindcss.com) - It has api which could be use ful to make prompt and get output
 - [Nodemailer](https://tailwindcss.com) - Used to send mail or attachment programmatically
+- [Turborepo](https://turbo.build/) - Incremental build system used for building monorepo projects
 
 ## 🔨 Locally install
 
