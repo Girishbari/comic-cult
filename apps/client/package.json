@@ -6,8 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "server": "node server/index.js"
+    "lint": "next lint"
   },
   "dependencies": {
     "@google/generative-ai": "^0.3.1",
