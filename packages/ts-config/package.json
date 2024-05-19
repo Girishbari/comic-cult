@@ -1,14 +1,15 @@
 {
-  "name": "@repo/js-config",
+  "name": "@repo/ts-config",
   "version": "1.0.0",
-  "description": "js config package",
-  "main": "index.js",
+  "description": "ts config package",
+  "main": "index.ts",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "JS",
+    "TS",
+    "TypeScript",
     "Config",
     "Dev"
   ],
