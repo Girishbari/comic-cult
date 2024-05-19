@@ -1,6 +1,6 @@
 import { Bangers } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
+import Navbar from "./components/navbar";
 
 const play = Bangers({
   weight: ["400"],
