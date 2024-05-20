@@ -7,7 +7,7 @@
 .yarn/install-state.gz
 
 #env variable
-./env
+.env
 
 # testing
 /coverage

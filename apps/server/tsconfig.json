@@ -1,4 +1,4 @@
 {
   "extends": "@repo/ts-config/tsconfig.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "index.ts"]
 }

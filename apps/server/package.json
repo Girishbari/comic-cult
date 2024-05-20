@@ -24,10 +24,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/ts-config": "^1.0.0",
-    "@types/node": "20.12.12",
+    "@repo/ts-config": "*",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.12.12",
+    "@types/nodemailer": "^6.4.15",
+    "@types/pdfkit": "^0.13.4",
     "@types/react": "18.3.2",
     "autoprefixer": "^10.4.19",
-    "typescript": "5.4.5"
+    "typescript": "^5.4.5"
   }
 }
