@@ -1,33 +1,15 @@
 const User = {}; // Change after the model decided for the user
 import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
-
-interface CookieOptions {
-  expires: Date;
-  httpOnly: boolean;
-  secure: boolean;
-}
-
-//don't know what ResponseType is so we are assuming as ResponseType
-interface ResponseType {
-  cookie: (
-    type: "jwt" | "others",
-    token: string,
-    cookieOptions: CookieOptions
-  ) => void;
-}
-
-interface User {
-  password?: string | undefined;
-  _id: string;
-}
+import { UserInit } from "../types/authController";
+import { CookieOptions } from "../types/authController";
 
 const createSendToken: (
-  user: User,
+  user: UserInit,
   statusCode: number,
   res: Response
 ) => void = (user, statusCode, res) => {
-  
+
   // no definition of signToken present
   const token = signToken("replace with user id on db"); // Change after the model decided for the user
 
@@ -61,7 +43,7 @@ const createSendToken: (
 };
 
 //no definition of catchAsync present
-exports.signup = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
+const signup = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
   const newUser = { _id: "new user id" }; // Replace with new user object
 
   if(process.env && process.env.JWT_SECRET){
@@ -72,3 +54,5 @@ exports.signup = catchAsync(async (req: Request, res: Response, next: NextFuncti
     
   createSendToken(newUser, 201, res);
 });
+
+export default signup;
