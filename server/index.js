@@ -41,6 +41,7 @@ const makePdf = () => {
       let randomNum = Math.floor(Math.random() * 1000);
 
       const doc = new PDFDocument({ size: [512, 515] });
+      // check path.resolve() instead __dirname
       const pdfPath = path.join(__dirname, '/pdfs/', `newFileName${randomNum}.pdf`);
 
       console.log("yes from makePDF");
