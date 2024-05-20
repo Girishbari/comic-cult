@@ -30,7 +30,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@repo/ts-config": "^1.0.0",
+    "@repo/ts-config": "*",
     "@types/node": "20.12.12",
     "@types/react": "18.3.2",
     "autoprefixer": "^10.4.19",
