@@ -1,10 +1,11 @@
 "use client"
 import { useRouter } from 'next/navigation';
+import { FC } from 'react';
 
-function intro() {
+const intro: FC<{}> = () => {
 
   const router = useRouter();
-  
+
   return (
     <>
       <div className="flex justify-start gap-5 hero-content text-center text-neutral-content">

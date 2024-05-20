@@ -1,10 +1,10 @@
 "use client";
 
-import { ChangeEvent, useRef, useState } from "react";
+import { ChangeEvent, FC, useRef, useState } from "react";
 import Navbar from "../navbar";
 import { InputInit } from "../types/dashboard";
 
-export default function form() {
+const form: FC<{}> = () => {
   const [inputData, setInputData] = useState<InputInit>({
     userText: "",
     customization: "",
@@ -153,3 +153,5 @@ export default function form() {
     </>
   );
 }
+
+export default form;

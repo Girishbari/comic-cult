@@ -4,7 +4,7 @@ import { createCanvas, loadImage } from "canvas";
 import dotenv from "dotenv";
 dotenv.config();
 
-import "../types/controller";
+import { JsonOutput } from "../types/controller";
 
 let genAI: GoogleGenerativeAI,
   engineId: string,
@@ -149,7 +149,7 @@ const generateImages: (
             writeDialogue(person, filePath, speech, randomNum);
           }
 
-          resolve(); // Resolve the promise after writing the dialogue
+          resolve("Promise Resolved"); // Resolve the promise after writing the dialogue
 
           //code issue in resolve as we need 1 argument atleast!!!
         });

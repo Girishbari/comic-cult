@@ -1,6 +1,7 @@
 import Link from "next/link"
+import { FC } from "react"
 
-export default function navbar() {
+const navbar: FC<{}> = () => {
   return (
     <div className=" fixed top-0 navbar bg-base-200 md:px-7">
       <div className="navbar-start">
@@ -33,3 +34,5 @@ export default function navbar() {
     </div>
   )
 }
+
+export default navbar;
