@@ -1,20 +1,22 @@
 "use client";
 
-import { useRef, useState } from "react";
-import Navbar from "../components/navbar"
+import { ChangeEvent, useRef, useState } from "react";
+import Navbar from "../navbar";
+import { InputInit } from "../types/dashboard";
 
 export default function form() {
-  const [inputData, setInputData] = useState({
+  const [inputData, setInputData] = useState<InputInit>({
     userText: "",
     customization: "",
     diffusionKey: "",
+    prompt: ""
   });
-  const [loading, setLoading] = useState();
-  const keyRef = useRef();
 
+  //LOADING variable has no initial value set... keeping false for instance
+  const [loading, setLoading] = useState<boolean>(false);
+  const keyRef = useRef<HTMLInputElement>(null);
 
-
-  function handleChange(e) {
+  function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     const { name, value } = e.target;
     setInputData({ ...inputData, [name]: value });
   }
@@ -51,12 +53,16 @@ export default function form() {
 
   async function handleSubmit() {
     console.log(inputData);
+
     setLoading(true);
+
     try {
+
       if (inputData.prompt === "" || inputData.customization === "") {
         alert("data is not filled");
         return;
       }
+
       const response = await fetch("http://localhost:5000/", {
         method: "POST",
         headers: {
@@ -64,6 +70,7 @@ export default function form() {
         },
         body: JSON.stringify(inputData),
       });
+
       if (response.ok) {
         console.log(response.statusText);
         alert
@@ -72,9 +79,11 @@ export default function form() {
         alert(response.statusText);
         throw new Error();
       }
+
     } catch (error) {
       console.log("error message => " + error);
     }
+
     setLoading(false);
 
   }
@@ -82,6 +91,7 @@ export default function form() {
   return (
     <>
       <Navbar />
+
       <div className="form-control w-full max-w-lg px-4 text-center ">
         <div>
           <span className=" drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  text-[28px] tracking-wide font-bold">
