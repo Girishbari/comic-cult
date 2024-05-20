@@ -1,4 +1,7 @@
 {
   "extends": "@repo/ts-config/tsconfig.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "index.ts"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "index.ts"],
+  "compilerOptions": {
+    "outDir": "./dist"
+  }
 }

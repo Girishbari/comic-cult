@@ -3,6 +3,8 @@ import { NextFunction, Response } from "express";
 import jwt from "jsonwebtoken";
 import { UserInit } from "../types/authController";
 import { CookieOptions } from "../types/authController";
+import signToken from "./signToken";
+import catchAsync from "./catchAsync";
 
 const createSendToken: (
   user: UserInit,
