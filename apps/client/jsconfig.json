@@ -1,0 +1,3 @@
+{
+    "extends": "@repo/js-config/jsconfig.json"
+}
