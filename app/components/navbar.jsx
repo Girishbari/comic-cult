@@ -3,20 +3,20 @@ import Link from "next/link"
 import Searchbar from "./searchbar"
 import Button from "./Button"
 
-export default function navbar() {
+export default function Navbar() {
   return (
     <div className=" flex justify-between navbar mb-4 bg-[#191919] border-b-[1px] md:px-7">
       <div className=" space-x-2">
-      <div className=" relative w-7 h-5 ">
-        <Image src="/logo.png" alt="image" fill/>
+        <div className=" relative w-7 h-5 ">
+          <Image src="/logo.png" alt="image" fill />
+        </div>
+        <p className=" font-bold text-xs md:text-base">Superhero Comics</p>
+        <Searchbar />
       </div>
-      <p className=" font-bold text-xs md:text-base">Superhero Comics</p>
-      <Searchbar/>
-      </div>
-      
+
       <div className=" max-md:hidden space-x-4">
-      <Button text="Signup"/>
-      <Button text="Login"/>
+        <Button text="Signup" />
+        <Button text="Login" />
       </div>
       {/* Mobile navbar */}
       <div className='md:hidden navbar-end'>
@@ -27,8 +27,8 @@ export default function navbar() {
           <ul tabIndex={0} className="menu space-y-4 menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
             <li>
               <Link className="link link-error cursor-pointer" href='https://political-pencil-5b5.notion.site/Some-comic-cult-examples-6d6afb1372fe42dab033ec1fe26644b0' target='_blank'>examples</Link></li>
-              <Button text="Signup"/>
-      <Button text="Login"/>
+            <Button text="Signup" />
+            <Button text="Login" />
           </ul>
         </div>
       </div>

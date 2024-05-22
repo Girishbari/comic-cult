@@ -10,7 +10,7 @@
 ./env
 
 #turbo file
-./turbo
+.turbo
 
 # testing
 /coverage

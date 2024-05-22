@@ -12,6 +12,9 @@
     "dev": "turbo run dev"
   },
   "devDependencies": {
-    "turbo": "^1.12.4"
+    "turbo": "^1.10.4"
+  },
+  "dependencies": {
+    "react-icons": "^5.2.1"
   }
 }
