@@ -45,6 +45,18 @@ https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d
         
 </table>
 
+##🎨✍✨ Design Links
+<table>
+    <tr>
+        <th>Design</th>
+        <th>Link</th>
+    </tr>
+    <tr>
+        <td>Design 1</td>
+        <td><a href="https://www.figma.com/design/noJe9ZZ2f3QUtF16Z8eErG/Untitled?node-id=0-1&t=SoiQ7EEFy9ART5JZ-1">Link to Design 1</a></td>
+    </tr>
+</table>
+
 ## 🤔 What challenges I ran into
 
 <table>
