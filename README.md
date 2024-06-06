@@ -91,7 +91,87 @@ https://github.com/Girishbari/comic-cult/assets/38005544/f264d59a-5e9b-46dc-8c3d
 - [Nodemailer](https://tailwindcss.com) - Used to send mail or attachment programmatically
 - [Turborepo](https://turbo.build/) - Incremental build system used for building monorepo projects
 
-## 🔨 Locally install
+# Setup Guide ✨
+
+Welcome to the **Comic Cult** project! Follow these steps to set up and run the project on your local machine.
+
+## Prerequisites 🛠️
+
+Before you begin, ensure you have the following installed:
+
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher)
+
+## Installation Steps 🚀
+
+1. **Clone the repository:**
+
+    ```sh
+    git clone https://github.com/Girishbari/comic-cult.git
+    ```
+
+2. **Navigate to the project directory:**
+
+    ```sh
+    cd comic-cult
+    ```
+
+3. **Install all dependencies:**
+
+    ```sh
+    npm install
+    ```
+
+4. **Install Turbo globally (if not already installed):**
+
+    ```sh
+    npm install turbo --global
+    ```
+
+## Configuration ⚙️
+
+Before running the project, you may need to configure certain environment variables or settings. These configurations are typically found in `.env` files within specific directories. Ensure that you review and update these configurations according to your environment.
+
+## Running the Project ▶️
+
+To run the entire project, execute the following command:
+
+```sh
+turbo dev
+```
+
+This will start both the client and server components.
+
+## Running Individual Components 🧩
+
+If you prefer to run individual components separately, follow these steps:
+
+### Run the Server Only 🌐
+
+Navigate to the server directory and start the server:
+
+```sh
+cd apps/server && npm run dev
+```
+
+### Run the Client Only 💻
+
+Navigate to the client directory and start the client:
+
+```sh
+cd apps/client && npm run dev
+```
+
+## Troubleshooting 🛠️
+
+If you encounter any issues during setup or while running the project, refer to the project's issue tracker on GitHub or search for solutions online. Common issues and their resolutions may also be documented in the project's README or other documentation files.
+
+## Additional Information 📚
+
+For more detailed information about the project and its components, refer to the project's main documentation.
+
+
+<!-- ## 🔨 Locally install
 
 To run this project, you will need to add the following environment variables to your .env file (use .env.example for reference)
 
@@ -99,7 +179,7 @@ To run this project, you will need to add the following environment variables to
     <tr><td>[Gemini AI]</td> <td>https://ai.google.dev/docs </td> </tr>
      <tr><td>[Dream Studio]</td> <td>https://dreamstudio.ai/ </td> </tr>
       <tr><td>[Nodemailer]</td> <td> https://stackoverflow.com/questions/45478293/username-and-password-not-accepted-when-using-nodemailer</td> </tr>
-</table>
+</table> -->
 
 ## 🤔 How to contribute ?
 
