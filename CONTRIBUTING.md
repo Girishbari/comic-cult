@@ -135,7 +135,7 @@ Make sure to mention which issue is solved with this Pull Request by mentioning 
 
 ### Review
 
-Congratulations! 🎉🌟 Sit and relax, you've made your contribution to the Palettegram project. Wait until the PR is reviewed and incorporate changes suggested by the reviewers. After which the PR can be successfully merged.
+Congratulations! 🎉🌟 Sit and relax, you've made your contribution to the comic-cult project. Wait until the PR is reviewed and incorporate changes suggested by the reviewers. After which the PR can be successfully merged.
 
 ## Other Ways to Contribute
 
