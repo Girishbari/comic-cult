@@ -1,6 +1,6 @@
 import { Bangers } from "next/font/google";
 import "./globals.css";
-import Navbar from "./navbar";
+import Navbar from "../../../packages/components/navbar";
 import { Metadata } from "next";
 import { FC, ReactNode } from "react";
 
