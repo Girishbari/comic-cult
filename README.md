@@ -4,6 +4,19 @@
 
 ![banner](https://github.com/Girishbari/comic-cult/assets/38005544/8f7228f3-1fa9-488d-9147-2ff3dbbae0bb)
 
+## Table of Contents
+
+1. [Project Description](#project-description)
+2. [Demo](#demo)
+3. [Features](#features)
+4. [Design Links](#design-links)
+5. [Challenges Faced](#challenges-faced)
+6. [Tech Stack](#tech-stack)
+7. [Setup Guide](#setup-guide)
+8. [How to Contribute](#how-to-contribute)
+9. [Additional Information](#additional-information)
+
+
 ## ℹ️ Project description
 
 Transform your stories into captivating comic art with dialogue effortlessly! Our project harnesses the power of GemeiAI and stable diffusion for processing and generating stunning images and dialogues. Utilizing feature flags, you can seamlessly toggle environment variables on and off as needed. The final masterpiece is delivered straight to your inbox as a beautifully crafted comic PDF. Enjoy the magic of storytelling in a whole new visual dimension! 📧💬🖼️
