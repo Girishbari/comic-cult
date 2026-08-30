@@ -12,9 +12,6 @@ Transform your stories into captivating comic art with dialogue effortlessly! Ou
 
 </div>
 
-## Demo 💻
-
-Visit https://palettegram.vercel.app to see the live demo!
 
 ## ⚒️ Features:
 
